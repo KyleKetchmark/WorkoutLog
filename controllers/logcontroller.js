@@ -54,7 +54,7 @@ router.get("/:id", validateJWT, async (req, res) => {
  //Update a Journal
 
 router.put("/:id", validateJWT, async (req, res) => {
-    const { description, definition, result } = req.log;
+    const { description, definition, result } = req.body;
     const userId = req.user.id;
 
     const query = {
